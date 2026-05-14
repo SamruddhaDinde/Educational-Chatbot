@@ -1,3 +1,4 @@
+import os
 import torch
 from transformers import (
     AutoTokenizer,
@@ -5,9 +6,10 @@ from transformers import (
     BitsAndBytesConfig,
     pipeline,
 )
+from peft import PeftModel
 from langchain_huggingface import HuggingFacePipeline
 
-from app.config.config import HUGGINGFACE_REPO_ID, HF_TOKEN
+from app.config.config import HUGGINGFACE_REPO_ID, HF_TOKEN, ADAPTER_PATH
 from app.common.logger import get_logger
 from app.common.custom_exception import CustomException
 
@@ -43,6 +45,14 @@ def load_llm():
                 torch_dtype=torch.float32,
                 device_map="cpu",
             )
+
+        adapter_config = os.path.join(ADAPTER_PATH, "adapter_config.json")
+        if os.path.exists(adapter_config):
+            logger.info(f"Loading fine-tuned LoRA adapter from {ADAPTER_PATH}")
+            model = PeftModel.from_pretrained(model, ADAPTER_PATH)
+            model = model.merge_and_unload()
+        else:
+            logger.warning("No fine-tuned adapter found — using base model")
 
         pipe = pipeline(
             "text-generation",
