@@ -109,8 +109,6 @@ def train():
         save_strategy="epoch",            # saves a checkpoint after each epoch
         report_to="none",                 # change to "wandb" for live dashboard logging
         dataset_text_field="text",
-        max_seq_length=MAX_SEQ_LEN,
-        packing=False,
     )
 
     trainer = SFTTrainer(
@@ -119,6 +117,8 @@ def train():
         train_dataset=dataset,
         peft_config=get_lora_config(),
         processing_class=tokenizer,
+        max_seq_length=MAX_SEQ_LEN,
+        packing=False,
     )
 
     trainer.train()
