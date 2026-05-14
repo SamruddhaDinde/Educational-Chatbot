@@ -1,0 +1,142 @@
+[
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is a class in OOP?"},
+      {"role": "assistant", "content": "A class is a blueprint or template that defines the attributes (data) and methods (behaviour) that objects of that type will have. It does not hold data itself — it describes the structure from which objects are created."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is an object in OOP?"},
+      {"role": "assistant", "content": "An object is a specific instance of a class that occupies memory and holds actual data. For example, if Car is a class, then myCar = Car('Toyota') creates one concrete object with its own state."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is encapsulation?"},
+      {"role": "assistant", "content": "Encapsulation bundles an object's data and the methods that act on it into a single unit (the class), and restricts direct external access to that data. This is enforced through access modifiers: private keeps members within the class, protected allows subclasses, and public allows everyone."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is inheritance in OOP?"},
+      {"role": "assistant", "content": "Inheritance allows a child class (subclass) to acquire attributes and methods from a parent class (superclass), enabling code reuse. The subclass can extend or override inherited behaviour without rewriting the parent's code."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is polymorphism?"},
+      {"role": "assistant", "content": "Polymorphism means 'many forms' — a single interface can represent different underlying types. In practice, a method call on a parent-type reference will execute the correct overridden version in the actual subclass at runtime (dynamic dispatch)."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is abstraction in OOP?"},
+      {"role": "assistant", "content": "Abstraction hides complex implementation details and exposes only the essential interface to the user. Abstract classes and interfaces enforce this by declaring method signatures without providing the implementation, which subclasses must then supply."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is the difference between a class and an object?"},
+      {"role": "assistant", "content": "A class is a compile-time template that defines structure — no memory is allocated for it. An object is a runtime instance of that class with its own memory, state, and identity. You can create many objects from one class, each with different attribute values."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is a constructor?"},
+      {"role": "assistant", "content": "A constructor is a special method that runs automatically when an object is created. Its job is to initialise the object's attributes to valid starting values. In Python it is __init__, in Java and C++ it shares the class name."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is method overriding?"},
+      {"role": "assistant", "content": "Method overriding occurs when a subclass provides its own implementation of a method already defined in the parent class, keeping the same name and signature. At runtime, the subclass version is called instead of the parent's, enabling polymorphic behaviour."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is method overloading?"},
+      {"role": "assistant", "content": "Method overloading defines multiple methods with the same name but different parameter lists (different number or types of arguments) within the same class. The correct version is selected at compile time based on the arguments passed. Python does not support true overloading natively."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is an abstract class?"},
+      {"role": "assistant", "content": "An abstract class is a class that cannot be instantiated directly and is intended only as a base for subclasses. It can contain both abstract methods (declared but not implemented) and concrete methods. Subclasses must implement all abstract methods before they can be instantiated."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is an interface in OOP?"},
+      {"role": "assistant", "content": "An interface is a pure contract that declares method signatures with no implementation. Any class that implements the interface must provide a concrete body for every declared method. Unlike an abstract class, an interface carries no state and a class can implement multiple interfaces."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is the difference between an abstract class and an interface?"},
+      {"role": "assistant", "content": "An abstract class can have instance variables, constructors, and concrete methods, and a class can only inherit from one. An interface contains only method signatures (and constants), carries no state, and a class can implement many interfaces simultaneously."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What are access modifiers?"},
+      {"role": "assistant", "content": "Access modifiers control the visibility of class members. Public members are accessible from anywhere. Private members are accessible only within the same class. Protected members are accessible within the class and its subclasses. They are a key mechanism for enforcing encapsulation."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is the 'this' keyword?"},
+      {"role": "assistant", "content": "The 'this' keyword is a reference to the current object instance within a method or constructor. It is used to distinguish instance variables from local parameters with the same name, and to pass the current object as an argument to another method."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is composition in OOP?"},
+      {"role": "assistant", "content": "Composition models a 'has-a' relationship by including instances of other classes as attributes, rather than inheriting from them. It is generally preferred over inheritance because it makes dependencies explicit and keeps classes loosely coupled."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is the Single Responsibility Principle?"},
+      {"role": "assistant", "content": "The Single Responsibility Principle (SRP) states that a class should have only one reason to change, meaning it should do exactly one job. This keeps classes small, focused, and easy to test, and prevents unrelated changes from breaking unrelated functionality."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is a static method?"},
+      {"role": "assistant", "content": "A static method belongs to the class rather than to any instance, so it can be called without creating an object. It has no access to instance attributes (no 'this' or 'self'). Static methods are used for utility or helper logic that is logically related to the class but does not depend on object state."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is multiple inheritance?"},
+      {"role": "assistant", "content": "Multiple inheritance allows a class to inherit from more than one parent class, combining their attributes and methods. Python supports it directly; Java does not (but allows implementing multiple interfaces). It can cause ambiguity known as the Diamond Problem when two parents share the same method name."}
+    ]
+  },
+  {
+    "messages": [
+      {"role": "system", "content": "You are an educational assistant that explains Object-Oriented Programming concepts clearly and concisely."},
+      {"role": "user", "content": "What is the Open/Closed Principle?"},
+      {"role": "assistant", "content": "The Open/Closed Principle states that a class should be open for extension but closed for modification. New behaviour should be added by extending the class (via inheritance or composition) rather than changing existing tested code, reducing the risk of introducing bugs."}
+    ]
+  }
+]
