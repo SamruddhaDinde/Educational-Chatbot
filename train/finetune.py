@@ -2,8 +2,7 @@
 QLoRA fine-tuning of microsoft/Phi-4-mini-instruct on OOP Q&A data.
 Run this on the HPC (requires CUDA + ~8 GB VRAM).
 
-Usage:
-    HF_TOKEN=<your_token> python train/finetune.py
+
 """
 
 import os
