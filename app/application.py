@@ -4,12 +4,10 @@ from dotenv import load_dotenv
 import os
 
 
-load_dotenv()
-HF_TOKEN = os.environ.get("HF_TOKEN")
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-load_dotenv()
 
 from markupsafe import Markup
 def nl2br(value):
@@ -34,8 +32,7 @@ def index():
                 qa_chain = create_qa_chain()
                 if qa_chain is None:
                     raise Exception("QA chain could not be created (LLM or VectorStore issue)")
-                response = qa_chain.invoke({"query" : user_input})
-                result = response.get("result" , "No response")
+                result = qa_chain.invoke(user_input)
 
                 messages.append({"role" : "assistant" , "content" : result})
                 session["messages"] = messages
