@@ -26,7 +26,7 @@ LORA_R       = 16       # adapter rank — higher = more capacity, more memory
 LORA_ALPHA   = 32       # scaling factor (rule of thumb: 2 × r)
 LORA_DROPOUT = 0.05
 MAX_SEQ_LEN  = 512
-NUM_EPOCHS   = 3
+NUM_EPOCHS   = 10
 BATCH_SIZE   = 2        # per GPU; effective batch = BATCH_SIZE × GRAD_ACCUM
 GRAD_ACCUM   = 4        # simulates batch size of 8 without extra VRAM
 
@@ -105,7 +105,7 @@ def train():
         lr_scheduler_type="cosine",
         warmup_ratio=0.05,
         bf16=True,
-        logging_steps=5,                  # produces the loss curve data for your report
+        logging_steps=1,                
         save_strategy="epoch",            # saves a checkpoint after each epoch
         report_to="none",                 # change to "wandb" for live dashboard logging
         dataset_text_field="text",
@@ -122,11 +122,10 @@ def train():
 
     trainer.train()
 
-    # Save the LoRA adapter weights (NOT the full model — much smaller file)
     trainer.save_model(OUTPUT_DIR)
     tokenizer.save_pretrained(OUTPUT_DIR)
 
-    # Persist training loss history so evaluate.py and your report can use it
+    
     log_path = os.path.join(OUTPUT_DIR, "training_log.json")
     loss_history = [
         {"step": entry["step"], "loss": entry["loss"]}
