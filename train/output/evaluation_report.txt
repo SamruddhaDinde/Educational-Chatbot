@@ -1,0 +1,173 @@
+================================================================================
+EVALUATION REPORT — Baseline vs QLoRA Fine-Tuned (Phi-4-mini-instruct)
+================================================================================
+
+[1] Explain the concept of encapsulation with an example.
+
+  BASELINE  (ROUGE-L 0.114):
+  Encapsulation is a fundamental concept in object-oriented programming (OOP) that involves bundling data (attributes) and methods (functions) that operate on the data into a single unit called an object. This encapsulation allows the internal representation of an object to be hidden from the outside world, providing a clear separation between the object's interface and implementation details.
+
+Encapsulation provides several benefits, including:
+
+1. Data hiding: By restricting access to an object's attributes, encapsulation prevents unauthorized access and modification of data.
+2. Code organization: Encapsulation groups related data and methods together, making the code easier to understand and maintain.
+3. Flexibility: Encapsulation allows developers to change an object's internal implementation without affecting the code that uses the object, as long as the object's interface remains unchanged.
+
+Here's an example to illustrate encapsulation in OOP:
+
+```python
+class BankAccount:
+    def __init__(self, account_number, balance=0):
+        self.__account_number = account_number
+        self
+
+  FINE-TUNED (ROUGE-L 0.119):
+  Encapsulation is a fundamental concept in object-oriented programming (OOP) that involves bundling data (attributes) and methods (functions) that operate on the data into a single unit called a class. It also restricts direct access to some of an object's components, which is a way of preventing unintended interference and misuse of the data.
+
+Encapsulation helps to hide the internal implementation details of an object, allowing the user to interact with the object through a well-defined interface. This interface usually consists of public methods that provide controlled access to the object's data.
+
+Here's an example in Python to illustrate encapsulation:
+
+```python
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self.__balance = initial_balance  # Private attribute
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return True
+        return False
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self
+
+  REFERENCE:
+  Encapsulation bundles data and methods in a class and hides internal state from outside. For example, a BankAccount class keeps balance private and exposes only deposit() and withdraw() methods, preventing arbitrary external modification.
+--------------------------------------------------------------------------------
+
+[2] How does method overriding differ from method overloading?
+
+  BASELINE  (ROUGE-L 0.155):
+  Method overriding and method overloading are two distinct concepts in object-oriented programming, and they serve different purposes.
+
+Method Overriding:
+Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. This allows the subclass to modify the behavior of the inherited method. The overriding method must have the same name, return type, and parameters as the method in the superclass. In C++, you would use the `override` keyword to indicate that a method is intended to override a method in the superclass.
+
+Example in C++:
+```cpp
+class Shape {
+public:
+    virtual void draw() {
+        cout << "Drawing shape." << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {
+        cout << "Drawing circle." << endl;
+    }
+};
+```
+
+Method Overloading:
+Method overloading occurs when multiple methods in the same class have the same name but different parameters (different types or numbers of parameters). This allows
+
+  FINE-TUNED (ROUGE-L 0.174):
+  Method overriding and method overloading are two different concepts in object-oriented programming (OOP) that allow us to achieve polymorphism and code reusability.
+
+1. Method Overriding:
+Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. The overridden method in the subclass has the same name, return type, and parameters as the method in the superclass. This allows us to change the behavior of the method when it is called on an object of the subclass.
+
+Example in Java:
+```java
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+2. Method Overloading:
+Method overloading occurs when a class has multiple methods with the same name but different parameters (different types or numbers of parameters). This allows us to perform similar operations with different
+
+  REFERENCE:
+  Overriding redefines a parent class method in a subclass with the same signature, resolved at runtime. Overloading defines multiple methods with the same name but different parameter lists in the same class, resolved at compile time.
+--------------------------------------------------------------------------------
+
+[3] Why is composition preferred over inheritance?
+
+  BASELINE  (ROUGE-L 0.112):
+  Composition is preferred over inheritance in many cases due to several reasons:
+
+1. Flexibility: Composition allows developers to create flexible and reusable code by combining smaller, independent components. This makes it easier to modify or extend functionality without affecting other parts of the codebase.
+
+2. Loose coupling: Composition promotes loose coupling between components, making it easier to change or replace individual components without impacting the overall system. This leads to more maintainable and testable code.
+
+3. Avoiding inheritance pitfalls: Inheritance can lead to issues like tight coupling, fragile base class problems, and difficulties in extending functionality. Composition avoids these pitfalls by not relying on a single inheritance hierarchy.
+
+4. Code reuse: Composition allows developers to reuse existing components in different contexts, promoting code reuse and reducing duplication. Inheritance, on the other hand, can lead to code duplication and increased complexity.
+
+5. Better encapsulation: Composition provides better encapsulation by allowing developers to hide the internal implementation details of components. Inheritance, however, exposes
+
+  FINE-TUNED (ROUGE-L 0.109):
+  Composition is preferred over inheritance in certain scenarios due to its flexibility, maintainability, and adherence to the principles of object-oriented design. Here are some reasons why composition is often favored:
+
+1. Flexibility: Composition allows objects to be composed of other objects, enabling greater flexibility in designing systems. This allows developers to easily modify or extend the behavior of an object by changing its components, rather than relying on a rigid inheritance hierarchy.
+
+2. Loose coupling: Composition promotes loose coupling between components, making it easier to change or replace individual components without affecting the overall system. This leads to better maintainability and easier testing.
+
+3. Reusability: Composition encourages the reuse of existing components, as objects can be composed of multiple components that can be reused across different parts of the system. This helps reduce code duplication and promotes code reuse.
+
+4. Avoidance of the "fragile base class" problem: Inheritance can lead to fragile base classes, where changes to the base class can inadvertently affect derived classes.
+
+  REFERENCE:
+  Composition creates loosely coupled designs by assembling behaviour from separate objects rather than inheriting a fixed hierarchy. It avoids the fragile base class problem and allows behaviour to be changed at runtime by swapping composed objects.
+--------------------------------------------------------------------------------
+
+[4] What is the purpose of an abstract class?
+
+  BASELINE  (ROUGE-L 0.200):
+  An abstract class serves as a blueprint for other classes. It defines a common set of attributes and methods that derived classes must implement, while also allowing for shared functionality. Abstract classes cannot be instantiated directly, but they can be inherited by concrete subclasses, which can then be instantiated. This allows for a more organized and modular code structure, promoting code reuse and reducing redundancy. Abstract classes are useful when you want to define a common interface for a group of related classes, but also want to enforce certain shared behavior or properties across those classes.
+
+  FINE-TUNED (ROUGE-L 0.175):
+  An abstract class is a class that cannot be instantiated on its own and serves as a blueprint for other classes. It is used to define common properties and behaviors that can be shared by multiple derived classes. Abstract classes are primarily used to establish a common interface and shared functionality among related classes, allowing for code reuse and polymorphism.
+
+In object-oriented programming, an abstract class is declared using the `abstract` keyword, and it can contain both abstract methods (without implementation) and concrete methods (with implementation). The derived classes must implement the abstract methods, ensuring that they provide specific implementations for the shared functionality.
+
+Overall, abstract classes help to organize and structure code, promote code reuse, and provide a clear and consistent interface for related classes.
+
+  REFERENCE:
+  An abstract class serves as a base template that cannot be instantiated directly. It enforces that all subclasses implement certain methods while allowing shared concrete behaviour to be defined once in the base class.
+--------------------------------------------------------------------------------
+
+[5] What does the Single Responsibility Principle mean in practice?
+
+  BASELINE  (ROUGE-L 0.118):
+  The Single Responsibility Principle (SRP) is one of the five SOLID principles of object-oriented design. It states that a class or module should have only one reason to change, meaning it should have only one responsibility or job.
+
+In practice, this means that each class should be responsible for a single aspect of the functionality provided by the software. For example, a class named `OrderProcessor` should only handle the processing of orders, and not also handle tasks like sending emails or generating reports.
+
+By adhering to the SRP, developers can create more maintainable and understandable code. It also makes it easier to test and debug individual parts of the software, as each class or module can be focused on a specific task. This can ultimately lead to a more robust and flexible codebase.
+
+  FINE-TUNED (ROUGE-L 0.132):
+  The Single Responsibility Principle (SRP) is one of the five SOLID principles of object-oriented design. It states that a class or module should have only one reason to change, meaning it should have only one responsibility or job.
+
+In practice, this means that each class or module should focus on a single concern or functionality. For example, if you have a class responsible for handling user authentication, it should not also handle user profile management or database connections. Instead, you would create separate classes for each responsibility.
+
+By following SRP, you can achieve a more modular and maintainable codebase, as changes to one responsibility won't affect the others. This also makes it easier to test and debug your code, as each class or module has a clear and isolated purpose.
+
+  REFERENCE:
+  SRP means each class should do exactly one job. A class handling both database queries and email sending violates SRP — splitting it into two classes means a change in email logic cannot accidentally break database logic.
+--------------------------------------------------------------------------------
+
+Average ROUGE-L — Baseline: 0.1395  |  Fine-tuned: 0.1418  |  Delta: +0.0023

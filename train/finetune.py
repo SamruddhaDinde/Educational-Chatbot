@@ -26,7 +26,7 @@ LORA_R       = 16       # adapter rank — higher = more capacity, more memory
 LORA_ALPHA   = 32       # scaling factor (rule of thumb: 2 × r)
 LORA_DROPOUT = 0.05
 MAX_SEQ_LEN  = 512
-NUM_EPOCHS   = 10
+NUM_EPOCHS   = 20
 BATCH_SIZE   = 2        # per GPU; effective batch = BATCH_SIZE × GRAD_ACCUM
 GRAD_ACCUM   = 4        # simulates batch size of 8 without extra VRAM
 

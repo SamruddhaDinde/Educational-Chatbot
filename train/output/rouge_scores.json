@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Explain the concept of encapsulation with an example.",
+    "baseline_rouge": 0.1136,
+    "finetuned_rouge": 0.119,
+    "delta": 0.0054
+  },
+  {
+    "question": "How does method overriding differ from method overloading?",
+    "baseline_rouge": 0.1546,
+    "finetuned_rouge": 0.1739,
+    "delta": 0.0193
+  },
+  {
+    "question": "Why is composition preferred over inheritance?",
+    "baseline_rouge": 0.1117,
+    "finetuned_rouge": 0.1095,
+    "delta": -0.0022
+  },
+  {
+    "question": "What is the purpose of an abstract class?",
+    "baseline_rouge": 0.2,
+    "finetuned_rouge": 0.175,
+    "delta": -0.025
+  },
+  {
+    "question": "What does the Single Responsibility Principle mean in practice?",
+    "baseline_rouge": 0.1176,
+    "finetuned_rouge": 0.1317,
+    "delta": 0.0141
+  }
+]
