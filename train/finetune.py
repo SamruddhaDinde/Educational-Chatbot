@@ -57,6 +57,7 @@ def load_base_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, token=HF_TOKEN)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"      # required for causal LM training
+    tokenizer.model_max_length = MAX_SEQ_LEN
 
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
@@ -108,6 +109,7 @@ def train():
         save_strategy="epoch",            # saves a checkpoint after each epoch
         report_to="none",                 # change to "wandb" for live dashboard logging
         dataset_text_field="text",
+        packing=False,
     )
 
     trainer = SFTTrainer(
@@ -116,8 +118,6 @@ def train():
         train_dataset=dataset,
         peft_config=get_lora_config(),
         processing_class=tokenizer,
-        max_seq_length=MAX_SEQ_LEN,
-        packing=False,
     )
 
     trainer.train()
