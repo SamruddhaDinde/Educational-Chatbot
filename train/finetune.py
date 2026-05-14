@@ -51,7 +51,7 @@ def load_base_model():
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,   # second quantization saves ~0.4 bits/param
         bnb_4bit_quant_type="nf4",         # NormalFloat4 is better than int4 for LLMs
-        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_compute_dtype=torch.bfloat16,
     )
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, token=HF_TOKEN)
@@ -104,7 +104,7 @@ def train():
         learning_rate=2e-4,
         lr_scheduler_type="cosine",
         warmup_ratio=0.05,
-        fp16=True,
+        bf16=True,
         logging_steps=5,                  # produces the loss curve data for your report
         save_strategy="epoch",            # saves a checkpoint after each epoch
         report_to="none",                 # change to "wandb" for live dashboard logging
