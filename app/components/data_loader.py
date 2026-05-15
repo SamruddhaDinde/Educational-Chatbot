@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
 from app.components.pdf_loader import load_pdf_files,create_text_chunks
 from app.components.vector_store import save_vector_store
 from app.config.config import DB_FAISS_PATH
