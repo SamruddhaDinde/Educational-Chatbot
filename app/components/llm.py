@@ -54,6 +54,7 @@ def load_llm():
         else:
             logger.warning("No fine-tuned adapter found — using base model")
 
+        end_token_id = tokenizer.convert_tokens_to_ids("<|end|>")
         pipe = pipeline(
             "text-generation",
             model=model,
@@ -63,7 +64,7 @@ def load_llm():
             do_sample=True,
             repetition_penalty=1.15,
             return_full_text=False,
-            eos_token_id=tokenizer.convert_tokens_to_ids("<|end|>"),
+            eos_token_id=[tokenizer.eos_token_id, end_token_id],
         )
 
         llm = HuggingFacePipeline(pipeline=pipe)

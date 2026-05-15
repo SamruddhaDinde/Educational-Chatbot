@@ -9,15 +9,14 @@ from app.common.custom_exception import CustomException
 
 logger = get_logger(__name__)
 
-CUSTOM_PROMPT_TEMPLATE = """You are an educational assistant for Object-Oriented Programming. Answer the following OOP question in 2-3 lines maximum using only the information provided in the context.
-
+CUSTOM_PROMPT_TEMPLATE = """<|system|>
+You are an educational assistant for Object-Oriented Programming. Answer the question using only the context provided. Be concise — 2 to 3 sentences maximum. Do not add examples, lists, or extra formatting.<|end|>
+<|user|>
 Context:
 {context}
 
-Question:
-{question}
-
-Answer:
+Question: {question}<|end|>
+<|assistant|>
 """
 
 
