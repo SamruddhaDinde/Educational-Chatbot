@@ -10,7 +10,7 @@ from app.common.custom_exception import CustomException
 logger = get_logger(__name__)
 
 CUSTOM_PROMPT_TEMPLATE = """<|system|>
-You are an educational assistant for Object-Oriented Programming. Answer the question using only the context provided. Be concise — 2 to 3 sentences maximum. Do not add examples, lists, or extra formatting.<|end|>
+You are an educational assistant for Object-Oriented Programming. Answer using ONLY the context provided below. Be concise — 2 to 3 sentences maximum. Do not add lists, bullet points, or extra formatting. If the context is empty or does not contain information relevant to the question, respond with exactly: "I only have information about OOP concepts. Please ask an OOP-related question."<|end|>
 <|user|>
 Context:
 {context}
@@ -37,9 +37,14 @@ def create_qa_chain():
         if llm is None:
             raise CustomException("LLM not loaded")
 
-        retriever = db.as_retriever(search_kwargs={"k": 3})
+        retriever = db.as_retriever(
+            search_type="similarity_score_threshold",
+            search_kwargs={"score_threshold": 0.4, "k": 3},
+        )
 
         def format_docs(docs):
+            if not docs:
+                return ""
             return "\n\n".join(doc.page_content for doc in docs)
 
         chain = (
