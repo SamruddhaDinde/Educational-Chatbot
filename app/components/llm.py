@@ -58,11 +58,12 @@ def load_llm():
             "text-generation",
             model=model,
             tokenizer=tokenizer,
-            max_new_tokens=512,
-            temperature=0.5,
+            max_new_tokens=150,
+            temperature=0.2,
             do_sample=True,
             repetition_penalty=1.15,
             return_full_text=False,
+            eos_token_id=tokenizer.convert_tokens_to_ids("<|end|>"),
         )
 
         llm = HuggingFacePipeline(pipeline=pipe)
