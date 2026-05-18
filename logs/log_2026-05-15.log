@@ -773,3 +773,191 @@
 2026-05-15 16:29:14,569 - INFO - 127.0.0.1 - - [15/May/2026 16:29:14] "GET / HTTP/1.1" 200 -
 2026-05-15 16:30:19,864 - INFO - 127.0.0.1 - - [15/May/2026 16:30:19] "[32mGET /clear HTTP/1.1[0m" 302 -
 2026-05-15 16:30:19,869 - INFO - 127.0.0.1 - - [15/May/2026 16:30:19] "GET / HTTP/1.1" 200 -
+2026-05-15 16:50:03,709 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://138.25.54.66:5000
+2026-05-15 16:50:03,709 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-15 16:50:16,340 - INFO - 127.0.0.1 - - [15/May/2026 16:50:16] "GET / HTTP/1.1" 200 -
+2026-05-15 16:50:29,362 - INFO - Loading vector store for context
+2026-05-15 16:50:31,155 - INFO - No device provided, using cuda:0
+2026-05-15 16:50:31,399 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:31,404 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:31,636 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:31,640 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:31,646 - INFO - Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-15 16:50:31,865 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:31,871 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:32,095 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:32,100 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-05-15 16:50:32,324 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:32,330 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:32,559 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:32,565 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:32,797 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:33,029 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:33,034 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:33,273 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:33,279 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:33,588 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:33,812 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:34,050 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:34,286 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:34,519 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:34,524 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:34,749 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:34,754 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:34,976 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:34,981 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:35,223 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:35,228 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:35,463 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:35,692 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-15 16:50:35,958 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:35,963 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:36,211 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-05-15 16:50:36,401 - INFO - Loading existing vectorstore...
+2026-05-15 16:50:36,407 - INFO - Loading faiss with AVX512 support.
+2026-05-15 16:50:36,431 - INFO - Successfully loaded faiss with AVX512 support.
+2026-05-15 16:50:36,664 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:36,669 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:36,911 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:36,916 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:37,146 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:37,151 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:37,389 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:37,608 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-15 16:50:38,545 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct "HTTP/1.1 200 OK"
+2026-05-15 16:50:38,569 - INFO - CUDA detected — loading with 4-bit quantization (BitsAndBytes NF4)
+2026-05-15 16:50:38,796 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:38,802 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:39,033 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:39,038 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:41,595 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:41,600 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/generation_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:41,706 - INFO - Loading fine-tuned LoRA adapter from /workspace/train/output/oop-phi4-lora
+2026-05-15 16:50:42,924 - INFO - LLM loaded successfully
+2026-05-15 16:50:42,924 - INFO - Successfully created the QA chain
+2026-05-15 16:50:44,044 - INFO - 127.0.0.1 - - [15/May/2026 16:50:44] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-05-15 16:50:44,053 - INFO - 127.0.0.1 - - [15/May/2026 16:50:44] "GET / HTTP/1.1" 200 -
+2026-05-15 16:50:56,296 - INFO - Loading vector store for context
+2026-05-15 16:50:56,300 - INFO - No device provided, using cuda:0
+2026-05-15 16:50:56,531 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:56,536 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:56,767 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:56,771 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:56,775 - INFO - Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-15 16:50:57,018 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:57,024 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:57,257 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:57,262 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-05-15 16:50:57,480 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:57,486 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:57,763 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:57,767 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:58,000 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:58,231 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:58,236 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:58,470 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:58,524 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:58,808 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:59,042 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:59,275 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:59,504 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:50:59,731 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:59,735 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:50:59,954 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:50:59,959 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:00,178 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:00,184 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:00,418 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:00,424 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:00,656 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:00,887 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-15 16:51:01,149 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:01,154 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:01,387 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-05-15 16:51:01,420 - INFO - Loading existing vectorstore...
+2026-05-15 16:51:01,644 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:01,649 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:01,872 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:01,877 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:02,101 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:02,107 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:02,333 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:02,568 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-15 16:51:03,498 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct "HTTP/1.1 200 OK"
+2026-05-15 16:51:03,522 - INFO - CUDA detected — loading with 4-bit quantization (BitsAndBytes NF4)
+2026-05-15 16:51:03,757 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:03,762 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:04,001 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:04,006 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:05,272 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:05,276 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/generation_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:05,370 - INFO - Loading fine-tuned LoRA adapter from /workspace/train/output/oop-phi4-lora
+2026-05-15 16:51:05,647 - INFO - LLM loaded successfully
+2026-05-15 16:51:05,647 - INFO - Successfully created the QA chain
+2026-05-15 16:51:10,740 - INFO - 127.0.0.1 - - [15/May/2026 16:51:10] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-05-15 16:51:10,750 - INFO - 127.0.0.1 - - [15/May/2026 16:51:10] "GET / HTTP/1.1" 200 -
+2026-05-15 16:51:28,513 - INFO - Loading vector store for context
+2026-05-15 16:51:28,518 - INFO - No device provided, using cuda:0
+2026-05-15 16:51:28,748 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:28,753 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:28,983 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:28,988 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:28,991 - INFO - Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-05-15 16:51:29,219 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:29,225 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:29,447 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:29,453 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-05-15 16:51:29,684 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:29,690 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:29,911 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:29,917 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:30,155 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:30,379 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:30,384 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:30,623 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:30,628 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:30,903 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:31,130 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:31,358 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:31,580 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:31,813 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:31,818 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:32,047 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:32,052 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:32,288 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:32,294 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:32,529 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:32,536 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:32,771 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:33,003 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-15 16:51:33,270 - INFO - HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:33,275 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:33,516 - INFO - HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-05-15 16:51:33,550 - INFO - Loading existing vectorstore...
+2026-05-15 16:51:33,779 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:33,784 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:34,016 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:34,020 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:34,248 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:34,254 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:34,495 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-05-15 16:51:34,723 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-05-15 16:51:35,597 - INFO - HTTP Request: GET https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct "HTTP/1.1 200 OK"
+2026-05-15 16:51:35,623 - INFO - CUDA detected — loading with 4-bit quantization (BitsAndBytes NF4)
+2026-05-15 16:51:35,839 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:35,845 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:36,071 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:36,077 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:37,347 - INFO - HTTP Request: HEAD https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-05-15 16:51:37,352 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/Phi-4-mini-instruct/cfbefacb99257ffa30c83adab238a50856ac3083/generation_config.json "HTTP/1.1 200 OK"
+2026-05-15 16:51:37,475 - INFO - Loading fine-tuned LoRA adapter from /workspace/train/output/oop-phi4-lora
+2026-05-15 16:51:37,747 - INFO - LLM loaded successfully
+2026-05-15 16:51:37,747 - INFO - Successfully created the QA chain
+2026-05-15 16:51:37,756 - WARNING - No relevant docs were retrieved using the relevance score threshold 0.4
+2026-05-15 16:51:42,810 - INFO - 127.0.0.1 - - [15/May/2026 16:51:42] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-05-15 16:51:42,817 - INFO - 127.0.0.1 - - [15/May/2026 16:51:42] "GET / HTTP/1.1" 200 -
+2026-05-15 16:52:04,128 - INFO - 127.0.0.1 - - [15/May/2026 16:52:04] "[32mGET /clear HTTP/1.1[0m" 302 -
+2026-05-15 16:52:04,130 - INFO - 127.0.0.1 - - [15/May/2026 16:52:04] "GET / HTTP/1.1" 200 -

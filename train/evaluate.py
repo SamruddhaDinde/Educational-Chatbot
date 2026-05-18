@@ -1,14 +1,3 @@
-"""
-Evaluation script — generates the evidence for your academic report.
-
-Produces:
-  1. evaluation_report.txt  — side-by-side baseline vs fine-tuned answers
-  2. loss_curve.png          — training loss plot (from training_log.json)
-  3. rouge_scores.json       — ROUGE-L F1 scores for each test question
-
-Run on HPC after finetune.py completes:
-    python train/evaluate.py
-"""
 
 import os
 import json

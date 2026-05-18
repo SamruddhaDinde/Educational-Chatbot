@@ -1,8 +1,5 @@
 """
 QLoRA fine-tuning of microsoft/Phi-4-mini-instruct on OOP Q&A data.
-Run this on the HPC (requires CUDA + ~8 GB VRAM).
-
-
 """
 
 import os
@@ -16,19 +13,18 @@ from trl import SFTTrainer, SFTConfig
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", "app", ".env"))
 
-# ── Paths & hyperparameters ────────────────────────────────────────────────────
 MODEL_ID   = "microsoft/Phi-4-mini-instruct"
 HF_TOKEN   = os.environ.get("HF_TOKEN")
 DATA_PATH  = os.path.join(os.path.dirname(__file__), "data", "oop_qa.json")
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output", "oop-phi4-lora")
 
-LORA_R       = 16       # adapter rank — higher = more capacity, more memory
-LORA_ALPHA   = 32       # scaling factor (rule of thumb: 2 × r)
+LORA_R       = 16     
+LORA_ALPHA   = 32     
 LORA_DROPOUT = 0.05
 MAX_SEQ_LEN  = 512
 NUM_EPOCHS   = 20
-BATCH_SIZE   = 2        # per GPU; effective batch = BATCH_SIZE × GRAD_ACCUM
-GRAD_ACCUM   = 4        # simulates batch size of 8 without extra VRAM
+BATCH_SIZE   = 2   
+GRAD_ACCUM   = 4      
 
 
 def load_and_format_dataset(tokenizer) -> Dataset:
@@ -50,7 +46,7 @@ def load_base_model():
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_use_double_quant=True,   # second quantization saves ~0.4 bits/param
-        bnb_4bit_quant_type="nf4",         # NormalFloat4 is better than int4 for LLMs
+        bnb_4bit_quant_type="nf4",         # NormalFloat4 is better than int4 for LLMs, suggest by genai
         bnb_4bit_compute_dtype=torch.bfloat16,
     )
 
@@ -75,7 +71,7 @@ def get_lora_config() -> LoraConfig:
         r=LORA_R,
         lora_alpha=LORA_ALPHA,
         # These four projection matrices are the standard LoRA injection points
-        # for transformer attention layers.
+
         target_modules=["q_proj", "v_proj", "k_proj", "o_proj"],
         lora_dropout=LORA_DROPOUT,
         bias="none",
@@ -84,8 +80,7 @@ def get_lora_config() -> LoraConfig:
 
 
 def train():
-    if not torch.cuda.is_available():
-        raise EnvironmentError("This script requires a CUDA GPU. Run it on the HPC.")
+   
 
     print(f"GPU: {torch.cuda.get_device_name(0)}")
     print(f"VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
@@ -107,7 +102,7 @@ def train():
         bf16=True,
         logging_steps=1,                
         save_strategy="epoch",            # saves a checkpoint after each epoch
-        report_to="none",                 # change to "wandb" for live dashboard logging
+        report_to="none",                
         dataset_text_field="text",
         packing=False,
     )
